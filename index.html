@@ -8,7 +8,9 @@
   <meta property="og:title" content="Oliqon — Turning Bold Ideas Into Sustainable Impact" />
   <meta property="og:description" content="We help organizations reimagine possibilities and turn bold ideas into measurable outcomes." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://dummyimage.com/1200x630/111827/ffffff&text=Oliqon" />
+  <meta property="og:image" content="./og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="theme-color" content="#0a2540" />
 
   <!-- Bootstrap CSS -->
@@ -76,16 +78,33 @@
 
     /* Accessibility focus */
     :focus-visible { outline: 3px solid var(--brand-accent); outline-offset: 2px; }
+      /* Brand logo visibility on dark navbar */
+    .brand-logo {
+      height: 48px; /* make it more prominent */
+      width: auto;
+      border-radius: 12px;           /* soft corners for JPEG edges */
+      background: #ffffff;           /* white plate to ensure contrast on dark nav */
+      padding: 4px 8px;              /* breathing room around the mark */
+      box-shadow: 0 4px 12px rgba(0,0,0,.25); /* subtle lift */
+    }
+    @media (min-width: 992px) {
+      .brand-logo { height: 56px; }
+    }
+
+    .brand-wordmark { font-weight: 700; letter-spacing: .2px; }
+
+    /* Ensure nav has enough contrast behind the logo */
+    .navbar.navbar-dark { background: rgba(10,37,64,.95) !important; }
   </style>
 </head>
 <body>
   <!-- Nav -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: rgba(10,37,64,.9); backdrop-filter: blur(8px);">
     <div class="container">
-      <a class="navbar-brand" href="#home" aria-label="Oliqon home">
-        <!-- <img src="./Olicon.jpeg" alt="Oliqon" height="40" class="d-inline-block align-text-top me-2" /> -->
-        <span class="">Oliqon</span>
-        </a>
+      <a class="navbar-brand d-flex align-items-center" href="#home" aria-label="Oliqon home">
+        <img src="./Olicon_3.jpeg" alt="Oliqon logo" class="brand-logo me-2" />
+        <span class="brand-wordmark text-white">Oliqon</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -260,7 +279,7 @@
                     <button class="btn btn-primary px-4" type="submit">
                       <i class="bi bi-send me-2"></i>Send
                     </button>
-                    <a class="btn btn-outline-secondary" href="mailto:hello@oliqon.example" aria-label="Send us an email">Email us instead</a>
+                    <a class="btn btn-outline-secondary" href="mailto:hello@olicon.com" aria-label="Send us an email">Email us instead</a>
                   </div>
                   <small class="d-block mt-3 text-secondary">This demo form uses client‑side validation only. Connect it to your backend or a service like Formspree for production.</small>
                 </form>
@@ -292,14 +311,8 @@
   <footer class="py-4">
     <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
       <p class="m-0">© <span id="year"></span> Oliqon. All rights reserved.</p>
-      <div class="d-flex gap-3">
-        <a class="link-light link-underline" href="#home">Home</a>
-        <a class="link-light link-underline" href="#services">What We Do</a>
-        <a class="link-light link-underline" href="#approach">Our Approach</a>
-        <a class="link-light link-underline" href="#contact">Contact</a>
-      </div>
-    </div>
-  </footer>
+      <div class="d-flex flex-wrap align-items-center gap-3">
+        <a class="link-light d-flex align-items-center" href="mailto:hello@olicon.com" aria-label="Email Oliqo
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
