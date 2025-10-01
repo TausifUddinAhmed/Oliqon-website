@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Oliqon — Turning Bold Ideas Into Sustainable Impact</title>
-  <meta name="description" content="Oliqon is an innovation firm bridging strategy, design, and technology to create solutions that drive progress and lasting change." />
+  <meta name="description"
+    content="Oliqon is an innovation firm bridging strategy, design, and technology to create solutions that drive progress and lasting change." />
   <meta property="og:title" content="Oliqon — Turning Bold Ideas Into Sustainable Impact" />
-  <meta property="og:description" content="We help organizations reimagine possibilities and turn bold ideas into measurable outcomes." />
+  <meta property="og:description"
+    content="We help organizations reimagine possibilities and turn bold ideas into measurable outcomes." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="./og-image.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -21,91 +24,147 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-feature-settings: "ss01" on, "liga" on; }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-feature-settings: "ss01" on, "liga" on;
+    }
 
     /* Brand palette */
     :root {
-      --brand-bg: #0a2540;   /* deep indigo */
-      --brand-accent: #1abc9c; /* teal */
-      --brand-accent-2: #8e44ad; /* purple */
+      --brand-bg: #0a2540;
+      /* deep indigo */
+      --brand-accent: #1abc9c;
+      /* teal */
+      --brand-accent-2: #8e44ad;
+      /* purple */
     }
 
     /* Animated gradient hero background */
     .hero {
       position: relative;
       background: radial-gradient(1200px 600px at 10% 10%, rgba(26, 188, 156, .25), transparent),
-                  radial-gradient(900px 500px at 90% 20%, rgba(142, 68, 173, .25), transparent),
-                  linear-gradient(135deg, #0a2540 0%, #0e2f57 50%, #0a2540 100%);
+        radial-gradient(900px 500px at 90% 20%, rgba(142, 68, 173, .25), transparent),
+        linear-gradient(135deg, #0a2540 0%, #0e2f57 50%, #0a2540 100%);
       color: #fff;
       overflow: hidden;
     }
+
     .hero::after {
       content: "";
       position: absolute;
       inset: -20% -10% -20% -10%;
-      background: conic-gradient(from 0deg at 50% 50%, rgba(255,255,255,.04), rgba(255,255,255,.08), rgba(255,255,255,.04));
+      background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, .04), rgba(255, 255, 255, .08), rgba(255, 255, 255, .04));
       animation: spin 24s linear infinite;
       pointer-events: none;
     }
-    @keyframes spin { to { transform: rotate(1turn); } }
+
+    @keyframes spin {
+      to {
+        transform: rotate(1turn);
+      }
+    }
 
     .glass {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
     }
 
-    .section-pad { padding: 5rem 0; }
-    .badge-accent { background: var(--brand-accent); }
-    .link-underline { text-decoration: underline dotted; text-underline-offset: 4px; }
+    .section-pad {
+      padding: 5rem 0;
+    }
 
-    .shadow-soft { box-shadow: 0 10px 30px rgba(2,12,27,.12); }
+    .badge-accent {
+      background: var(--brand-accent);
+    }
+
+    .link-underline {
+      text-decoration: underline dotted;
+      text-underline-offset: 4px;
+    }
+
+    .shadow-soft {
+      box-shadow: 0 10px 30px rgba(2, 12, 27, .12);
+    }
 
     /* Hover lift */
-    .lift { transition: transform .25s ease, box-shadow .25s ease; }
-    .lift:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(2,12,27,.16); }
+    .lift {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(2, 12, 27, .16);
+    }
 
     /* Footer */
-    footer { background: #0b2238; color: rgba(255,255,255,.85); }
+    footer {
+      background: #0b2238;
+      color: rgba(255, 255, 255, .85);
+    }
 
     /* Utilities */
     .text-gradient {
       background: linear-gradient(90deg, #e3f8ff, #a5f3fc, #d8b4fe);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     /* Accessibility focus */
-    :focus-visible { outline: 3px solid var(--brand-accent); outline-offset: 2px; }
-      /* Brand logo visibility on dark navbar */
-    .brand-logo {
-      height: 48px; /* make it more prominent */
-      width: auto;
-      border-radius: 12px;           /* soft corners for JPEG edges */
-      background: #ffffff;           /* white plate to ensure contrast on dark nav */
-      padding: 4px 8px;              /* breathing room around the mark */
-      box-shadow: 0 4px 12px rgba(0,0,0,.25); /* subtle lift */
-    }
-    @media (min-width: 992px) {
-      .brand-logo { height: 56px; }
+    :focus-visible {
+      outline: 3px solid var(--brand-accent);
+      outline-offset: 2px;
     }
 
-    .brand-wordmark { font-weight: 700; letter-spacing: .2px; }
+    /* Brand logo visibility on dark navbar */
+    .brand-logo {
+      height: 48px;
+      /* make it more prominent */
+      width: auto;
+      border-radius: 12px;
+      /* soft corners for JPEG edges */
+      background: #ffffff;
+      /* white plate to ensure contrast on dark nav */
+      padding: 4px 8px;
+      /* breathing room around the mark */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+      /* subtle lift */
+    }
+
+    @media (min-width: 992px) {
+      .brand-logo {
+        height: 56px;
+      }
+    }
+
+    .brand-wordmark {
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
 
     /* Ensure nav has enough contrast behind the logo */
-    .navbar.navbar-dark { background: rgba(10,37,64,.95) !important; }
+    .navbar.navbar-dark {
+      background: rgba(10, 37, 64, .95) !important;
+    }
   </style>
 </head>
+
 <body>
   <!-- Nav -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: rgba(10,37,64,.9); backdrop-filter: blur(8px);">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top"
+    style="background: rgba(10,37,64,.9); backdrop-filter: blur(8px);">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#home" aria-label="Oliqon home">
         <img src="./Olicon_3.jpeg" alt="Oliqon logo" class="brand-logo me-2" />
         <!-- <span class="brand-wordmark text-white">Oliqon</span> -->
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
@@ -127,9 +186,11 @@
           <h1 class="display-5 fw-bold lh-tight mb-3">
             Turning <span class="text-gradient">Bold Ideas</span> Into Sustainable Impact
           </h1>
-          <p class="lead mb-4">We bridge strategy, design, and technology to create solutions that drive progress and lasting change.</p>
+          <p class="lead mb-4">We bridge strategy, design, and technology to create solutions that drive progress and
+            lasting change.</p>
           <div class="d-flex gap-3">
-            <a href="#contact" class="btn btn-light btn-lg fw-semibold px-4" aria-label="Go to contact section">Let’s Connect</a>
+            <a href="#contact" class="btn btn-light btn-lg fw-semibold px-4" aria-label="Go to contact section">Let’s
+              Connect</a>
             <a href="#services" class="btn btn-outline-light btn-lg fw-semibold px-4">What We Do</a>
           </div>
         </div>
@@ -139,7 +200,8 @@
               <i class="bi bi-lightbulb-fill fs-2 text-warning"></i>
               <h2 class="h5 m-0">Oliqon at a Glance</h2>
             </div>
-            <p class="mb-0">Oliqon is dedicated to helping businesses and leaders unlock new opportunities. We work side‑by‑side with teams to turn bold ideas into measurable outcomes.</p>
+            <p class="mb-0">Oliqon is dedicated to helping businesses and leaders unlock new opportunities. We work
+              side‑by‑side with teams to turn bold ideas into measurable outcomes.</p>
           </div>
         </div>
       </div>
@@ -152,7 +214,8 @@
       <div class="text-center mb-5" data-aos="fade-up">
         <span class="badge rounded-pill text-bg-dark px-3 py-2">What We Do</span>
         <h2 class="mt-3">Strategy, Design, and Technology — Seamlessly Integrated</h2>
-        <p class="text-secondary">Guiding organizations to reimagine possibilities and capture emerging trends, then building the tools that make progress real.</p>
+        <p class="text-secondary">Guiding organizations to reimagine possibilities and capture emerging trends, then
+          building the tools that make progress real.</p>
       </div>
       <div class="row g-4">
         <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="0">
@@ -160,7 +223,8 @@
             <div class="card-body p-4">
               <i class="bi bi-compass fs-1 mb-3 d-block text-primary" aria-hidden="true"></i>
               <h3 class="h5">Innovation Strategy</h3>
-              <p class="mb-0">We guide organizations to reimagine possibilities and capture emerging trends with analytical rigor and creative vision.</p>
+              <p class="mb-0">We guide organizations to reimagine possibilities and capture emerging trends with
+                analytical rigor and creative vision.</p>
             </div>
           </div>
         </div>
@@ -169,7 +233,8 @@
             <div class="card-body p-4">
               <i class="bi bi-cpu fs-1 mb-3 d-block text-success" aria-hidden="true"></i>
               <h3 class="h5">Technology Solutions</h3>
-              <p class="mb-0">We design and deploy tools that enhance efficiency and growth—turning ideas into secure, scalable products and services.</p>
+              <p class="mb-0">We design and deploy tools that enhance efficiency and growth—turning ideas into secure,
+                scalable products and services.</p>
             </div>
           </div>
         </div>
@@ -178,7 +243,8 @@
             <div class="card-body p-4">
               <i class="bi bi-people fs-1 mb-3 d-block text-info" aria-hidden="true"></i>
               <h3 class="h5">Collaborative Partnerships</h3>
-              <p class="mb-0">We work side‑by‑side with your teams to turn bold ideas into measurable outcomes and lasting change.</p>
+              <p class="mb-0">We work side‑by‑side with your teams to turn bold ideas into measurable outcomes and
+                lasting change.</p>
             </div>
           </div>
         </div>
@@ -192,7 +258,8 @@
       <div class="row align-items-center g-5">
         <div class="col-lg-6" data-aos="fade-right">
           <h2 class="h1">Our Approach</h2>
-          <p>We combine analytical rigor with creative vision. Every engagement is tailored to align with your long‑term goals, ensuring innovation is not just a concept, but a catalyst for transformation.</p>
+          <p>We combine analytical rigor with creative vision. Every engagement is tailored to align with your long‑term
+            goals, ensuring innovation is not just a concept, but a catalyst for transformation.</p>
           <div class="d-flex align-items-center gap-3 mt-4">
             <i class="bi bi-rocket-takeoff-fill fs-3 text-gradient" aria-hidden="true"></i>
             <p class="m-0 fw-semibold">Oliqon builds the future with you.</p>
@@ -217,7 +284,8 @@
                   <i class="bi bi-shield-check fs-3 text-success" aria-hidden="true"></i>
                   <div>
                     <h3 class="h6">From Idea to Implementation</h3>
-                    <p class="mb-0">Strategy informs delivery—de‑risked pilots, scalable builds, and continuous improvement.</p>
+                    <p class="mb-0">Strategy informs delivery—de‑risked pilots, scalable builds, and continuous
+                      improvement.</p>
                   </div>
                 </div>
               </div>
@@ -257,7 +325,7 @@
           <div class="p-4 p-lg-5 bg-white border rounded-4 shadow-soft text-center">
             <h2 class="h3 mb-3">Let’s Connect</h2>
             <p class="text-secondary mb-4">We respond promptly to all inquiries.</p>
-            <a class="btn btn-primary btn-lg px-4" href="mailto:hello@olicon.com">
+            <a class="btn btn-primary btn-lg px-4" href="mailto:hello@oliqon.com">
               <i class="bi bi-envelope me-2"></i>hello@oliqon.com
             </a>
             <!-- <div class="mt-3">
@@ -311,4 +379,5 @@
     })();
   </script>
 </body>
+
 </html>
